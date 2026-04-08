@@ -1,0 +1,10 @@
+matplotlib==3.10.8
+numpy==1.24.0
+open3d==0.14.1
+opencv_contrib_python==4.12.0.88
+opencv_python==4.12.0.88
+pyrender==0.1.45
+smplx==0.1.28
+torch==2.8.0
+torch==2.3.0.post101
+trimesh==4.8.1
