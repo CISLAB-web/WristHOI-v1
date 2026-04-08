@@ -1,0 +1,204 @@
+{
+  "subjects": [
+    {
+      "subject_id": "p001",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p002",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p003",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p004",
+      "num_sequences": 124,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p005",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p006",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p007",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p008",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p009",
+      "num_sequences": 125,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    },
+    {
+      "subject_id": "p010",
+      "num_sequences": 126,
+      "available_objects": [
+        "banana",
+        "CosmeticPumpBottle",
+        "cup",
+        "cutter",
+        "HandCream",
+        "Hotmeltgluegun",
+        "plate",
+        "Pliers",
+        "PottedMeatCan",
+        "RectangularBox",
+        "ShortCylinder",
+        "Spoon",
+        "Stapler",
+        "TallCylinder"
+      ]
+    }
+  ]
+}

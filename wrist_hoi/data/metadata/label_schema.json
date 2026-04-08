@@ -1,0 +1,53 @@
+{
+  "annotations": {
+    "mano_world": {
+      "file": "annotations/mano_world.npz",
+      "fields": [
+        "frame_ids",
+        "valid_mask",
+        "global_orient",
+        "hand_pose",
+        "transl",
+        "transl_raw",
+        "transl_correction",
+        "transl_correction_applied",
+        "betas"
+      ]
+    },
+    "object_pose_world": {
+      "file": "annotations/object_pose_world.npz",
+      "fields": [
+        "frame_ids",
+        "valid_mask",
+        "T_world_object",
+        "rotation_matrix",
+        "translation",
+        "pose_source"
+      ]
+    },
+    "hand_object_contact": {
+      "file": "annotations/hand_object_contact.npz",
+      "fields": [
+        "frame_ids",
+        "valid_mask",
+        "hand_vertex_offsets",
+        "hand_vertex_indices",
+        "contact_vertex_count",
+        "min_contact_distance_m"
+      ]
+    },
+    "interaction_state": {
+      "file": "annotations/interaction_state.npz",
+      "fields": [
+        "frame_ids",
+        "valid_mask",
+        "state_id",
+        "state_name",
+        "first_contact_frame_index",
+        "last_contact_frame_index",
+        "main_contact_start",
+        "main_contact_end"
+      ]
+    }
+  }
+}
