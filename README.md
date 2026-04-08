@@ -171,16 +171,3 @@ Other flags match the original scripts (e.g. `--preview`, `--frame_step`, `--qui
 ```bash
 python -m wrist_hoi.viz.scene3d_text --help
 ```
-
-### Code layout (visualization)
-
-| Module | Description |
-|--------|-------------|
-| `wrist_hoi/viz/scene3d_text.py` | Entry: `Scene3dText0208Visualizer` — prompt, state bar, contact heatmap, ffmpeg export |
-| `wrist_hoi/viz/scene3d_0208.py` | Base `Scene3d0208Visualizer` — 02/08 RGB fan background + wrist-centered 3D hand–object |
-| `wrist_hoi/viz/public_dataset.py` | Public layout helpers, paths, `wrap_text`, pyrender mesh utilities |
-| `wrist_hoi/viz/contact_heatmap_render.py` | Pyrender jet heatmap for the right-hand panel |
-
-### Roadmap
-
-- **Dataset loader API**: a dedicated Python API for the same public directory layout will be added for training and evaluation (for now, use the visualization script to validate paths and annotations).

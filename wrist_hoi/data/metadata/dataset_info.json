@@ -1,9 +1,0 @@
-{
-  "created_at": "2026-03-22T06:02:59",
-  "updated_at": "2026-03-22T19:19:34",
-  "coord_system": "world",
-  "world_definition": "fixed_camera_world",
-  "preferred_frame_index_camera": "09",
-  "sequence_count": 1257,
-  "release_structure_version": "v1"
-}
