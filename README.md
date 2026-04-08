@@ -217,3 +217,16 @@ print(bundle.rgb_paths.get("09"), bundle.rgb_paths.get("02"))
 
 ## Acknowledgements
 This research was supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2025-RS-2024-00437102) and the Global Research Support Program in the Digital Field program (IITP-2025-RS-2024-00418641) supervised by the IITP (Institute for Information \& Communications Technology Planning \& Evaluation).
+
+
+## Citation
+
+If you find this dataset useful for your research, please consider citing:
+
+```bibtex
+@misc{wristhoi2026,
+  title        = {WristHOI: A Dual Wrist-mounted Dataset for Contact-aware Hand-Object Interaction},
+  author       = {Xin Chu, Junghoon Sung, Changho Kim, Seongwhan Cho, Eunjee Choi, JongHa Lee, Younggeun Choi},
+  year         = {2026},
+  howpublished = {Under review for ACM Multimedia 2026}
+}
