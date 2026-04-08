@@ -9,16 +9,20 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Release-green)](https://github.com/CISLAB-web/WristHOI-v1)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**Author 1**<sup>1</sup>, **Author 2**<sup>1</sup>, **Author 3**<sup>2</sup>, **Author 4**<sup>1*</sup>  
+**Xin Chu**, **Junghoon Sung**, **Changho Kim**, **Seongwhan Cho**  
 
-<sup>1</sup> Affiliation One &nbsp;&nbsp; <sup>2</sup> Affiliation Two  
+**Eunjee Choi**, **Jongha Lee**, **Younggeun Choi**<sup>*</sup>  
+
+Dankook University, Yongin, Korea  
+
+<sup>*</sup> Corresponding author: younggch@dankook.ac.kr
 
 </div>
 
 ---
 
 <p align="center">
-  <img src="/wrist_hoi/viz/demo.gif" width="96%">
+  <img src="/wrist_hoi/viz/demo.gif" width="60%">
 </p>
 
 ## Overview
@@ -88,9 +92,15 @@ dataset_root/                 # e.g. ./data in this repo
 
 ### Dataset download
 
-Download the archives below, then **extract them into this repository’s `data/subjects/` directory** (repository root → `data/subjects/`), so you obtain paths such as `data/subjects/p001/`, `data/subjects/p002/`. 
+**1. Base metadata and object meshes (download first).** The following archive contains shared **`metadata/`** (e.g. `sequence_index.csv`, schemas, `object_keypoints_cache`, train/test splits) and **`assets/objects/`** (per-class object folders with meshes such as `mesh.obj`). Extract it under **`data/`** so you obtain `data/metadata/` and `data/assets/`. Replace the placeholder URL when the release link is ready.
 
-Replace the placeholder URLs below with the real release links when available.
+| Package | Approx. size | Download |
+|---------|--------------|----------|
+| **base** — `metadata/` + `assets/objects/` | *4.8MB*      | [Download]() |
+
+**2. Subject archives.** Download the packages below, then **extract them into this repository’s `data/subjects/` directory** (repository root → `data/subjects/`), so you obtain paths such as `data/subjects/p001/`, `data/subjects/p002/`.
+
+Replace any remaining placeholder URLs with the real release links when available.
 
 | # | Package | Approx. size | Download |
 |---|---------|--------------|----------|
@@ -151,19 +161,12 @@ A **GPU** is recommended for visualization. For **CUDA-enabled PyTorch**, use th
 From the repository root, point **`--dataset_root`** at **`./data`** after you have unpacked subjects under **`data/subjects/`** (and metadata/assets under **`data/`** as in [Directory Structure](#directory-structure)). If MANO is at the default location, you can omit `--mano_model_dir`:
 
 ```bash
-python -m wrist_hoi.viz.scene3d_text \
-  --dataset_root ./data \
-  --subject_id p002 \
-  --sequence_id p002__banana_g2__T01 \
-  --save_video ./out_scene3d_text.mp4
-```
-
-```bash
 python wrist_hoi/viz/scene3d_text.py \
   --dataset_root ./data \
-  --subject_id p002 \
-  --sequence_id p002__banana_g2__T01 \
-  --save_video ./out_scene3d_text.mp4
+  --subject_id p003 \
+  --sequence_id p003__cup_g5__T01 \
+  --mano_model_dir ./mano_dir \
+  --save_video ./p003_cup_g5_t01.mp4
 ```
 
 Other flags match the original scripts (e.g. `--preview`, `--frame_step`, `--quiet`). Full list:
@@ -171,3 +174,46 @@ Other flags match the original scripts (e.g. `--preview`, `--frame_step`, `--qui
 ```bash
 python -m wrist_hoi.viz.scene3d_text --help
 ```
+
+### Multi-camera mosaic (`public_dataset`)
+
+<p align="center">
+  <img src="/wrist_hoi/viz/demo_fix.gif" width="60%">
+</p>
+
+For a **single-window overview of the public layout**, use `wrist_hoi.viz.public_dataset`. It builds a tiled mosaic per frame:
+
+- **Fixed camera** (default `--fixed_cam 09`, auto-fallback if extrinsics require it): RGB, depth (pseudo-color), object mesh overlay in that camera, and hand mesh overlay (pyrender; uses `calibration/fixed_cameras.json` intrinsics / extrinsics when available).
+- **Wrist / “dynamic” cameras** (`--dynamic_cams`, default `02` and `08`): RGB fused with `hand_mask` (`--dynamic_view_mode mask`) or a synthetic 3D-style panel (`--dynamic_view_mode scene3d`).
+- **Flat MANO contact** panel (sparse hand edges + contact vertices from `hand_object_contact.npz`).
+- **State** chip, **timeline** from `language/state_descriptions.json` when present, and optional **state description** text.
+
+Requirements are the same as above (PyTorch, **smplx**, **pyrender**, **trimesh**, OpenCV; MANO v1.2 path). Example:
+
+```bash
+python -m wrist_hoi.viz.public_dataset \
+  --dataset_root ./data \
+  --subject_id p003 \
+  --sequence_id p003__cup_g5__T01 \
+  --preview \
+  --save_video ./mosaic_p003_cup_g5_t01.mp4
+```
+
+Use `python -m wrist_hoi.viz.public_dataset --help` for `--frame_step`, `--cell_width` / `--cell_height`, and `scene3d` wrist options.
+
+### Programmatic multi-camera paths (`PublicMultiviewLoader`)
+
+If you only need **per-frame file paths** for cameras `01`–`09` (RGB, depth, hand mask) and calibration handles—without opening a window or running MANO rendering—use `wrist_hoi.dataset.PublicMultiviewLoader`. It follows the same directory rules as the mosaic script (`sensor_data/.../rgb|depth|hand_mask/<camera_id>/`, `mano_world.npz` frame list, `frame_index.csv` availability). Example:
+
+```python
+from wrist_hoi.dataset import PublicMultiviewLoader
+
+loader = PublicMultiviewLoader("./data", "p003", "p003__cup_g5__T01", max_frames=0)
+bundle = loader.build_multiview_paths(0)
+print(bundle.rgb_paths.get("09"), bundle.rgb_paths.get("02"))
+```
+
+
+
+## Acknowledgements
+This research was supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2025-RS-2024-00437102) and the Global Research Support Program in the Digital Field program (IITP-2025-RS-2024-00418641) supervised by the IITP (Institute for Information \& Communications Technology Planning \& Evaluation).

@@ -1,4 +1,8 @@
-"""公开格式 WristHOI 序列的可视化与几何工具（由原 ECCV 校验脚本迁入）。"""
+"""公开格式 WristHOI 序列的可视化与几何工具（由原 ECCV 校验脚本迁入）。
+
+多相机拼图（固定机位 RGB/Depth/映射 + 手腕动态视角 + 接触面板）由 ``PublicSequenceVisualizer`` 完成。
+若仅需按帧枚举所有相机文件路径与标定，请使用 ``wrist_hoi.dataset.PublicMultiviewLoader``（与本文同源路径规则）。
+"""
 
 import argparse
 import csv
