@@ -100,8 +100,6 @@ dataset_root/                 # e.g. ./data in this repo
 
 **2. Subject archives.** Download the packages below, then **extract them into this repository’s `data/subjects/` directory** (repository root → `data/subjects/`), so you obtain paths such as `data/subjects/p001/`, `data/subjects/p002/`.
 
-Replace any remaining placeholder URLs with the real release links when available.
-
 | # | Package | Approx. size | Download |
 |---|---------|--------------|----------|
 | 1 | **demo** — small subset for testing the visualization pipeline | *(small)* | [Download]() |
