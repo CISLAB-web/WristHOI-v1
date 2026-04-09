@@ -127,6 +127,7 @@ After unpacking, place the model directory under this repository as:
 ```text
 models/
 └── manov1.2/
+    └── mano /
 ```
 
 (Use the layout from the MANO release, typically including `MANO_RIGHT.pkl` / `MANO_LEFT.pkl` and related assets.)
@@ -148,11 +149,8 @@ conda create -n wristhoi python=3.9 -y
 conda activate wristhoi
 cd /path/to/WristHOI-v1
 pip install -r requirements.txt
+python -m pip install --no-build-isolation "chumpy==0.70"
 ```
-
-A **GPU** is recommended for visualization. For **CUDA-enabled PyTorch**, use the official instructions at [PyTorch Get Started](https://pytorch.org/get-started/locally/) and install into the **`wristhoi`** environment (conda or pip wheel). If you install PyTorch via Conda, run `pip install -r requirements.txt` afterward and keep a single `torch` install (avoid mixing conflicting conda and pip builds).
-
-**MANO v1.2** must be placed under `models/manov1.2` as described above (or pass `--mano_model_dir`). For **browser-playable H.264 MP4** export, install **ffmpeg** with an H.264 encoder (**libx264**, **h264_nvenc**, etc.), e.g. `conda install -c conda-forge ffmpeg` while `wristhoi` is active, or use your system package manager.
 
 ### Usage
 
