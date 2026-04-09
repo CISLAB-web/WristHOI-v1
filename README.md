@@ -96,23 +96,23 @@ dataset_root/                 # e.g. ./data in this repo
 
 | Package | Approx. size | Download |
 |---------|--------------|----------|
-| **base** — `metadata/` + `assets/objects/` | *4.8MB*      | [Download]() |
+| **base** — `metadata/` + `assets/objects/` | *4.8MB*      | [Download](https://drive.google.com/file/d/11hbm3Ymqtovy-9JAl6ARhBVOLJkvlzD8/view?usp=sharing) |
 
 **2. Subject archives.** Download the packages below, then **extract them into this repository’s `data/subjects/` directory** (repository root → `data/subjects/`), so you obtain paths such as `data/subjects/p001/`, `data/subjects/p002/`.
 
-| # | Package | Approx. size | Download |
-|---|---------|--------------|----------|
-| 1 | **demo** — small subset for testing the visualization pipeline | *(small)* | [Download]() |
-| 2 | **p001** (`p001.tar.gz`) | 94 GB | [Download](https://drive.google.com/file/d/1FB9k-7KviDifYujMdsTMCIwjFW7eSNhp/view?usp=sharing) |
-| 3 | **p002** (`p002.tar.gz`) | 93 GB | [Download](https://drive.google.com/file/d/1cErP3WYZl6nHQlnLPpQ4CzWBm-x33Pl-/view?usp=sharing) |
-| 4 | **p003** (`p003.tar.gz`) | 100 GB | [Download](https://drive.google.com/file/d/1MI-rCgL62WXcEZse2sY7isrcacUUMAMa/view?usp=sharing) |
-| 5 | **p004** (`p004.tar.gz`) | 81 GB | [Download]() |
-| 6 | **p005** (`p005.tar.gz`) | 88 GB | [Download]() |
-| 7 | **p006** (`p006.tar.gz`) | 84 GB | [Download]() |
-| 8 | **p007** (`p007.tar.gz`) | 101 GB | [Download]() |
-| 9 | **p008** (`p008.tar.gz`) | 95 GB | [Download]() |
-| 10 | **p009** (`p009.tar.gz`) | 96 GB | [Download]() |
-| 11 | **p010** (`p010.tar.gz`) | 78 GB | [Download]() |
+| # | Package                   | Approx. size | Download |
+|---|---------------------------|--------------|----------|
+| 1 | **demo** — Dataset review | *820MB*      | [Download](https://drive.google.com/file/d/1mzeN2I9bR26cxDbRx6ZAzMHru5Ojd5fi/view?usp=sharing) |
+| 2 | **p001** (`p001.tar.gz`)  | 94 GB        | [Download](https://drive.google.com/file/d/1FB9k-7KviDifYujMdsTMCIwjFW7eSNhp/view?usp=sharing) |
+| 3 | **p002** (`p002.tar.gz`)  | 93 GB        | [Download](https://drive.google.com/file/d/1cErP3WYZl6nHQlnLPpQ4CzWBm-x33Pl-/view?usp=sharing) |
+| 4 | **p003** (`p003.tar.gz`)  | 100 GB       | [Download](https://drive.google.com/file/d/1MI-rCgL62WXcEZse2sY7isrcacUUMAMa/view?usp=sharing) |
+| 5 | **p004** (`p004.tar.gz`)  | 81 GB        | [Download](https://drive.google.com/file/d/1-lSrg-OmI-UbjBwPDZB7L9Db3_1tTulJ/view?usp=sharing) |
+| 6 | **p005** (`p005.tar.gz`)  | 88 GB        | [Download](https://drive.google.com/file/d/1-R6Sr8Lhz0d1TMD2VaHaZ887DwH6z9nf/view?usp=sharing) |
+| 7 | **p006** (`p006.tar.gz`)  | 84 GB        | [Download](https://drive.google.com/file/d/1_yhKJ2fIT14cFowUnsBsbfFisGksGMTw/view?usp=sharing) |
+| 8 | **p007** (`p007.tar.gz`)  | 101 GB       | [Download](https://drive.google.com/file/d/1zQzynAEorFvXtARRuGqOXqLEDZp1tB81/view?usp=sharing) |
+| 9 | **p008** (`p008.tar.gz`)  | 95 GB        | [Download](https://drive.google.com/file/d/1BfUC9iM7qK2FGMMkoCJdJgIft9FWdfnM/view?usp=sharing) |
+| 10 | **p009** (`p009.tar.gz`)  | 96 GB        | [Download](https://drive.google.com/file/d/1Rstp3JI7ukXAzcuonttqBLmzHwHkwNEC/view?usp=sharing) |
+| 11 | **p010** (`p010.tar.gz`)  | 78 GB        | [Download](https://drive.google.com/file/d/15NtcsRom1bhY_2mU4spfcCuF18tQl75c/view?usp=sharing) |
 
 ---
 
