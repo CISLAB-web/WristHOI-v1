@@ -25,7 +25,7 @@ Dankook University, Yongin, Korea
   <img src="/wrist_hoi/viz/demo.gif" width="60%">
 </p>
 
-## Overview
+## 📋 Overview
 
 **WristHOI** is a public dataset for contact-aware hand–object interaction understanding. It provides synchronized multi-view RGB-D observations together with unified world-coordinate annotations for hands and objects. In addition to geometric annotations, the dataset also includes interaction states and optional language descriptions for temporal interaction analysis.
 
@@ -40,7 +40,7 @@ This repository releases the public-format dataset organization, annotations, an
 
 ---
 
-## Directory Structure
+## 📁 Directory Structure
 
 The public layout uses a single **`dataset_root/`** directory that contains `assets/`, `metadata/`, and `subjects/`. When working **inside this repository**, place that tree under **`data/`** and pass **`--dataset_root ./data`** (or an absolute path to `.../WristHOI-v1/data`). Subject archives (**demo**, **p001**–**p010**) must be extracted **under `data/subjects/`** so each subject becomes `data/subjects/<subject_id>/` (not directly at the repository root).
 
@@ -90,7 +90,7 @@ dataset_root/                 # e.g. ./data in this repo
                     └── state_descriptions.json
 ```
 
-### Dataset download
+### ⬇️ Dataset download
 
 **1. Base metadata and object meshes (download first).** The following archive contains shared **`metadata/`** (e.g. `sequence_index.csv`, schemas, `object_keypoints_cache`, train/test splits) and **`assets/objects/`** (per-class object folders with meshes such as `mesh.obj`). Extract it under **`data/`** so you obtain `data/metadata/` and `data/assets/`. Replace the placeholder URL when the release link is ready.
 
@@ -116,7 +116,7 @@ dataset_root/                 # e.g. ./data in this repo
 
 ---
 
-## MANO model (before visualization)
+## 🤚 MANO model (before visualization)
 
 The 3D hand mesh pipeline expects **MANO v1.2** on disk. Download it from the official page (registration may be required):
 
@@ -136,11 +136,11 @@ By default, visualization scripts set `--mano_model_dir` to `<repository_root>/m
 
 ---
 
-## Visualization demo
+## 🎬 Visualization demo
 
 This repository includes a **wrist cameras 02/08 hand–object 3D scene** visualization with an optional **interaction state timeline**, **language prompts** from `labels/<sequence_id>/language/state_descriptions.json`, and a **MANO contact heatmap** panel (same view as the internal `contact_heatmap` tool). Code lives under `wrist_hoi.viz`.
 
-### Environment setup (conda)
+### 🛠️ Environment setup (conda)
 
 Create and activate a Conda environment named **`wristhoi`**, then install Python dependencies from `requirements.txt`:
 
@@ -152,7 +152,7 @@ pip install -r requirements.txt
 python -m pip install --no-build-isolation "chumpy==0.70"
 ```
 
-### Usage
+### 🚀 Usage
 
 From the repository root, point **`--dataset_root`** at **`./data`** after you have unpacked subjects under **`data/subjects/`** (and metadata/assets under **`data/`** as in [Directory Structure](#directory-structure)). If MANO is at the default location, you can omit `--mano_model_dir`:
 
@@ -171,7 +171,7 @@ Other flags match the original scripts (e.g. `--preview`, `--frame_step`, `--qui
 python -m wrist_hoi.viz.scene3d_text --help
 ```
 
-### Multi-camera mosaic (`public_dataset`)
+### 📷 Multi-camera mosaic (`public_dataset`)
 
 <p align="center">
   <img src="/wrist_hoi/viz/demo_fix.gif" width="60%">
@@ -197,7 +197,7 @@ python -m wrist_hoi.viz.public_dataset \
 
 Use `python -m wrist_hoi.viz.public_dataset --help` for `--frame_step`, `--cell_width` / `--cell_height`, and `scene3d` wrist options.
 
-### Programmatic multi-camera paths (`PublicMultiviewLoader`)
+### 🔧 Programmatic multi-camera paths (`PublicMultiviewLoader`)
 
 If you only need **per-frame file paths** for cameras `01`–`09` (RGB, depth, hand mask) and calibration handles—without opening a window or running MANO rendering—use `wrist_hoi.dataset.PublicMultiviewLoader`. It follows the same directory rules as the mosaic script (`sensor_data/.../rgb|depth|hand_mask/<camera_id>/`, `mano_world.npz` frame list, `frame_index.csv` availability). Example:
 
@@ -211,11 +211,11 @@ print(bundle.rgb_paths.get("09"), bundle.rgb_paths.get("02"))
 
 
 
-## Acknowledgements
+## 🙏 Acknowledgements
 This research was supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2025-RS-2024-00437102) and the Global Research Support Program in the Digital Field program (IITP-2025-RS-2024-00418641) supervised by the IITP (Institute for Information \& Communications Technology Planning \& Evaluation).
 
 
-## Citation
+## 📖 Citation
 
 If you find this dataset useful for your research, please consider citing:
 
